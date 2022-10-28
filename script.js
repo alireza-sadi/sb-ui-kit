@@ -13,5 +13,3 @@ window.addEventListener("scroll", () => {
     navBar.style.position = "sticky"
     navBar.style.backgroundImage = "var(--background-gradient)";
 })
-
-console.log(window.scrollBy(0, -window.innerHeight));
