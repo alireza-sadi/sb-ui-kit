@@ -11,17 +11,12 @@ navBar = document.querySelector(".navbar");
 
 const sticky = navBar.offsetTop + navBar.offsetHeight;
 
-if (window.scrollY >= sticky) {
-  console.log("yes")
-  navBar.style.position = "sticky";
-  navBar.style.backgroundImage = "var(--background-gradient)";
-} else {
-    console.log("no")
-    navBar.style.position = "absolute " ;
-    navBar.style.backgroundImage = "transparent";
-}
-  console.log(sticky)
-// window.addEventListener("scroll", () => {
-//   navBar.style.position = "sticky";
-//   navBar.style.backgroundImage = "var(--background-gradient)";
-// });
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= sticky) {
+    navBar.style.position = "sticky";
+    navBar.style.backgroundImage = "var(--background-gradient)";
+  } else {
+    navBar.style.position = "absolute ";
+    navBar.style.backgroundImage = "none";
+  }
+});
